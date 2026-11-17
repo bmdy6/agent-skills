@@ -1,0 +1,4 @@
+interface:
+  display_name: "学习知识库工作流"
+  short_description: "统一处理学习选题采集、学习记录写作、概念卡与 Obsidian 维护"
+  default_prompt: "使用 $learning-knowledge-workflow 判断是快速采集、学习记录写作还是知识库维护，并只加载对应规则。"

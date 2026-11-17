@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目导演"
+  short_description: "先理清需求和素材，再分阶段完成项目并验证真实用户路径"
+  default_prompt: "Use $project-director to clarify and direct this personal project before implementation."

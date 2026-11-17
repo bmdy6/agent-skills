@@ -1,0 +1,30 @@
+{
+  "skill": "learning-knowledge-workflow",
+  "routes": [
+    {
+      "id": "development-conversation",
+      "path": "references/development-conversation.md",
+      "triggers": ["从开发对话提炼学习选题", "列出没懂的概念让我选", "任务交接后的学习候选"]
+    },
+    {
+      "id": "training-and-assessment",
+      "path": "references/training-and-assessment.md",
+      "triggers": ["学习计划", "考考我", "实战试错", "掌握检验", "反向教学", "五分钟表达"]
+    },
+    {
+      "id": "capture-topic",
+      "path": "references/capture-topic.md",
+      "triggers": ["记一下", "以后学", "放进需要学习的", "这个我不懂"]
+    },
+    {
+      "id": "writing-record",
+      "path": "references/writing-record.md",
+      "triggers": ["写学习记录", "整理成文章", "写进知识库", "沉淀知识"]
+    },
+    {
+      "id": "vault-ops",
+      "path": "references/vault-ops.md",
+      "triggers": ["Obsidian", "双链", "Canvas", "Bases", "知识库维护", "目录整理"]
+    }
+  ]
+}

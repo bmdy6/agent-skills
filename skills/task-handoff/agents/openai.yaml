@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务接力"
+  short_description: "在上下文即将耗尽或手动请求时生成可执行的AI任务交接包"
+  default_prompt: "使用 $task-handoff 整理当前任务，并生成可供下一位 AI 直接接力的交接文件。"
