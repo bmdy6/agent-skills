@@ -38,7 +38,7 @@ description: >-
 ## 报告
 只写实测结果及限制，中文一两段。正常期间保持安静，只在故障或最终结果时通知。
 
-## 可选：断线自动修复（netwatch）
+## 自动修复断线（netwatch）
 心跳只保证电脑醒着，断线多半是网络侧：盒子的公网端点频繁变化后，盒子到对端的 DERP 中转会失效，而对端到盒子仍通。
 - 用仓库里的 `scripts/netwatch.sh`：flock 单实例，每 30 秒 ping 对端，连续 2 次不通就 `tailscale debug rebind` + `debug restun`，每分钟最多一次，记录到日志。
 - 只做温和修复：绝不 down/up，不重启 tailscaled，不碰远程会话客户端/守护。后台脚本不耗额度。
