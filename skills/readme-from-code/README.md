@@ -1,0 +1,74 @@
+# readme-from-code
+
+Turn code into a README people want to try, with tested commands and a checked first screen.
+
+[简体中文](README.zh-CN.md) · [MIT](LICENSE) · Tested with Codex; any agent that can read SKILL.md can follow the workflow.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/readme/hero-dark.png">
+  <img src="docs/readme/hero-light.png" alt="One CLI fixture README before and after its rewrite" width="838">
+</picture>
+
+Audit score = share of README checks passed (CLI fixture, before → after).
+
+## Quick start
+
+```sh
+npx skills add bmdy6/agent-skills --skill readme-from-code
+```
+
+Then tell your agent:
+
+> Use readme-from-code to write a source-backed README for this repo.
+
+Requires gh, Node 20+, Chromium, and a skill-capable agent; network for setup.
+
+## What you get
+
+- **Traceable claims.** Each fact points to a source file and line.
+- **Actual execution.** README commands run in disposable copies of the project.
+- **Readable evidence.** Render light, dark, English, and Chinese images with automated self-checks.
+
+## How it works
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/readme/workflow-dark.png">
+  <img src="docs/readme/workflow-light.png" alt="An illustration of the three-step workflow" width="838">
+</picture>
+
+## Options
+
+| Option | Purpose |
+|---|---|
+| `tidy` | Organize README structure with registered edits and preservation checks. |
+| `audit` | Report without changing the target. |
+| `verify` | Check commands, images, and the first screen. |
+| `--online` | Also check external links. |
+
+See the [command reference](docs/reference.md).
+
+## FAQ and boundaries
+
+**Does it merge or change settings?** No; it delivers files, suggestions, and a PR.
+
+**What do I decide?** Interactive runs ask you to choose a position and approve the first-screen preview.
+
+**Is image data real?** Terminal text comes from captures; diagrams are labeled illustrations. This hero shows the fixture’s actual before/after first screens.
+
+**Can I install remotely?** The repository is public and installation uses the main branch; unauthenticated gh installation is unverified.
+
+**What do audit scores mean?** They count passed README checks, not ratings from visitors.
+
+<details><summary>Execution boundary</summary>
+
+Disposable copies are not OS sandboxes. Run trusted projects only; source citations still need human judgment.
+
+</details>
+
+## Contributing
+
+Submit a reproducible issue or PR, and run npm test.
+
+## License
+
+[MIT](LICENSE).
