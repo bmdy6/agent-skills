@@ -16,7 +16,7 @@ test('READMEs mirror the result-first structure and retain scope boundaries', as
     }
     assert.doesNotMatch(text, /Original style \d/i);
     for (const field of ['"selector"', '"stylesheet"', '"line"', 'sources.json']) assert.ok(text.includes(field), field);
-    assert.ok(text.includes('npx skills add bmdy6/skill-design-from-sites'));
+    assert.ok(text.includes('npx skills add bmdy6/agent-skills --skill design-from-sites'));
     assert.ok(!text.includes('OWNER/REPO'));
     const links = [...text.matchAll(/\]\(((?!https?:)[^)#]+)/g), ...text.matchAll(/(?:href|src|srcset)="((?!https?:|#)[^"#]+)/g)].map(m => m[1]);
     assert.ok(links.length > 5);

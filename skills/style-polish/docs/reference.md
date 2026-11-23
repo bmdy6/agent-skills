@@ -1,7 +1,7 @@
 # Usage reference
 
 Python 3.9+, standard library only. Work in a local checkout of this public
-repository; the README clone command requires authenticated gh access. No package installation is needed.
+repository; the README installation command requires Node.js/npx. No package installation is needed.
 Read [SKILL.md](../SKILL.md) for the agent-led profile, polishing and edit-learning
 workflow, and [DESIGN.md](DESIGN.md) for implementation detail. The README example
 runs the pipeline; with an empty temporary home it has no personal messages to

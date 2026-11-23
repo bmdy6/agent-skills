@@ -14,14 +14,14 @@ Keepalive step only: `scripts/heartbeat_loop.py`, interval 2 seconds, ending wit
 ## Quick start
 
 ```sh
-gh repo clone bmdy6/skill-bot-keepalive .agents/skills/bot-keepalive
+npx skills add bmdy6/agent-skills --skill bot-keepalive
 ```
 
 Then tell your agent:
 
 > Use bot-keepalive to check the remote session connection, then keep it alive for 1 hour.
 
-Requires Python 3, a skill-capable agent, `gh` and network access.
+Requires Python 3, a skill-capable agent, and Node.js/npx with network access for installation.
 
 ## What you get
 

@@ -14,7 +14,7 @@
 ## 快速开始
 
 ```sh
-gh repo clone bmdy6/skill-readme-from-code .agents/skills/readme-from-code
+npx skills add bmdy6/agent-skills --skill readme-from-code
 ```
 
 然后告诉智能体：

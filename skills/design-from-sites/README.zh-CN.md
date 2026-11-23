@@ -32,7 +32,7 @@
 ## 快速开始
 
 ```sh
-npx skills add bmdy6/skill-design-from-sites
+npx skills add bmdy6/agent-skills --skill design-from-sites
 ```
 
 告诉 agent：

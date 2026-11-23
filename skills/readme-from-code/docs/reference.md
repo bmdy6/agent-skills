@@ -92,7 +92,7 @@ traceability; an agent must still review whether the cited line supports it.
   "audience":"repository maintainers",
   "oneLiner":{"en":"Turn repository facts into a README maintainers can verify.","zh-CN":"把仓库事实变成维护者可核验的项目介绍。"},
   "keyTerms":{"what":["readme"],"audience":["maintainers","developers","engineers","programmers","开发者","程序员"]},
-  "install":{"command":"npx skills add bmdy6/skill-readme-from-code"},
+  "install":{"command":"npx skills add bmdy6/agent-skills --skill readme-from-code"},
   "firstUse":"Write a source-backed README for this repository.",
   "languages":["en","zh-CN"],
   "accent":"#2f6f4e",

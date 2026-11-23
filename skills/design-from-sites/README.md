@@ -32,7 +32,7 @@ Four styles to explore your taste.
 ## Quick start
 
 ```sh
-npx skills add bmdy6/skill-design-from-sites
+npx skills add bmdy6/agent-skills --skill design-from-sites
 ```
 
 Tell your agent:

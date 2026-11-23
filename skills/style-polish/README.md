@@ -14,14 +14,14 @@ Agent-generated with the example profile; voice match = 100 minus profile-mismat
 ## Quick start
 
 ```sh
-gh repo clone bmdy6/skill-style-polish .agents/skills/style-polish
+npx skills add bmdy6/agent-skills --skill style-polish
 ```
 
 Then tell your agent:
 
 > Build my local style profile, then polish this draft in my voice.
 
-Requires gh to clone, Python 3.9+, and a skill-capable agent; standard library only.
+Install with Node.js/npx; run with Python 3.9+, and a skill-capable agent; standard library only.
 
 For a local, automatic profile build (no agent review):
 

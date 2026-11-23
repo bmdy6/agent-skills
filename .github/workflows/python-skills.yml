@@ -1,0 +1,31 @@
+name: Python skills
+on:
+  push:
+    paths: ['skills/style-polish/**', 'skills/bot-keepalive/**', '.github/workflows/python-skills.yml']
+  pull_request:
+    paths: ['skills/style-polish/**', 'skills/bot-keepalive/**', '.github/workflows/python-skills.yml']
+permissions:
+  contents: read
+jobs:
+  style-polish:
+    # Python 3.9 is unavailable on Ubuntu 26.04.
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        python: ['3.9', '3.13']
+    defaults:
+      run:
+        working-directory: skills/style-polish
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python3 -m unittest discover -s tests -v
+      - run: python3 scripts/check.py --leak-gate examples/spoken.example.md
+  bot-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m py_compile skills/bot-keepalive/scripts/heartbeat_loop.py
+      - run: bash -n skills/bot-keepalive/scripts/netwatch.sh

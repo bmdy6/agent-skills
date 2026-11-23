@@ -1,0 +1,42 @@
+name: README skill
+on:
+  push:
+    paths: ['skills/readme-from-code/**', '.github/workflows/readme-from-code.yml']
+  pull_request:
+    paths: ['skills/readme-from-code/**', '.github/workflows/readme-from-code.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skills/readme-from-code
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: skills/readme-from-code/package-lock.json
+      - run: npm ci
+      - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+  test-without-cjk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skills/readme-from-code
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: skills/readme-from-code/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      # Hosted runner images may change; explicitly keep this job CJK-free.
+      - run: |
+          sudo apt-get purge -y fonts-noto-cjk fonts-noto-cjk-extra
+          ! dpkg-query -W -f='${Status}' fonts-noto-cjk 2>/dev/null | grep -q 'install ok installed'
+      - run: npm test

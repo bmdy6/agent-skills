@@ -14,7 +14,7 @@ Audit score = share of README checks passed (CLI fixture, before → after).
 ## Quick start
 
 ```sh
-gh repo clone bmdy6/skill-readme-from-code .agents/skills/readme-from-code
+npx skills add bmdy6/agent-skills --skill readme-from-code
 ```
 
 Then tell your agent:

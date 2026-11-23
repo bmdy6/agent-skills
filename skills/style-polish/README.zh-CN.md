@@ -14,14 +14,14 @@
 ## 快速开始
 
 ```sh
-gh repo clone bmdy6/skill-style-polish .agents/skills/style-polish
+npx skills add bmdy6/agent-skills --skill style-polish
 ```
 
 然后告诉智能体：
 
 > 先建立本地文风档案，再按我的口吻润色这段草稿。
 
-克隆需要 gh，运行需要 Python 3.9+ 和支持技能的智能体；脚本仅用标准库。
+安装命令需要 Node.js/npx，运行需要 Python 3.9+ 和支持技能的智能体；脚本仅用标准库。
 
 直接在本地自动建档（不经智能体审阅）：
 

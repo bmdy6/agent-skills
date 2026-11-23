@@ -14,14 +14,14 @@
 ## 快速开始
 
 ```sh
-gh repo clone bmdy6/skill-bot-keepalive .agents/skills/bot-keepalive
+npx skills add bmdy6/agent-skills --skill bot-keepalive
 ```
 
 然后告诉你的 agent：
 
 > 用 bot-keepalive 先检查远程会话连接，再保活一小时。
 
-需要 Python 3 和能使用技能的 agent；克隆需要 `gh` 和网络。
+需要 Python 3 和能使用技能的 agent；安装需要 Node.js/npx 和网络。
 
 ## 你会得到什么
 
